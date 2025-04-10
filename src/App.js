@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { TestProvider } from "./context/TestContext";
+import Kategoria from "./components/Kategoria";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TestProvider>
+      <div className="App">
+        <h1>Hulladékgyűjtési Kérdések</h1>
+        <Kategoria />
+      </div>
+    </TestProvider>
   );
 }
 
